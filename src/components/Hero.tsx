@@ -1,7 +1,7 @@
 import CallButton from "./CallButton";
 
-const PHONE = "(510) 555-0100"; // Replace with real number
-const PHONE_RAW = "+15105550100";
+const PHONE = "(510) 999-1514"; // Replace with real number
+const PHONE_RAW = "+15109991514";
 
 export default function Hero() {
   return (

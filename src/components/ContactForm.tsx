@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 
 // Replace with your Formspree endpoint: https://formspree.io/
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mbdwbdkp";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: { preventDefault(): void; currentTarget: HTMLFormElement }) {
     e.preventDefault();
     setStatus("sending");
     const form = e.currentTarget;
@@ -91,7 +91,7 @@ export default function ContactForm() {
                   name="phone"
                   type="tel"
                   required
-                  placeholder="(510) 555-0100"
+                  placeholder="(510) 999-1514"
                   className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
                 />
               </div>

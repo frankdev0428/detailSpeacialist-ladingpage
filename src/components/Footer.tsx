@@ -1,5 +1,5 @@
-const PHONE = "(510) 555-0100";
-const PHONE_RAW = "+15105550100";
+const PHONE = "(510) 999-1514";
+const PHONE_RAW = "+15109991514";
 
 const areas = [
   "Hayward",
@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="text-2xl font-extrabold text-white mb-3">
-            🧹 East Bay Cleaners
+            🧹 The Detail Specialist
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
             Family-owned cleaning service specializing in move-out and deep cleaning

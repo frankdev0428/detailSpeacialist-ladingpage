@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-const PHONE = "(510) 555-0100";
-const PHONE_RAW = "+15105550100";
+const PHONE = "(510) 999-1514";
+const PHONE_RAW = "+15109991514";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="text-xl font-extrabold text-blue-700 shrink-0">
-          🧹 East Bay Cleaners
+          🧹 The Detail Specialist
         </a>
 
         {/* Desktop nav */}
