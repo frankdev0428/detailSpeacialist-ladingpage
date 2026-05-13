@@ -1,29 +1,72 @@
-const pairs = [
-  { label: "Kitchen", emoji: "🍳" },
-  { label: "Bathroom", emoji: "🚿" },
-  { label: "Living Room", emoji: "🛋️" },
-  { label: "Oven", emoji: "🔥" },
+import Image from "next/image";
+
+const photos = [
+  {
+    label: "Bedroom",
+    emoji: "🛏️",
+    before: "/images/bedroom-before.jpg",
+    after: "/images/bedroom-after.jpg",
+  },
+  {
+    label: "Kitchen",
+    emoji: "🍳",
+    before: "/images/kitchen-before.jpg",
+    after: "/images/kitchen-after.jpg",
+  },
+  {
+    label: "Bathroom",
+    emoji: "🚿",
+    before: "/images/bathroom-before.jpg",
+    after: "/images/bathroom-after.jpg",
+  },
+  {
+    label: "Floor / Grout",
+    emoji: "🧹",
+    before: "/images/floor-before.jpg",
+    after: "/images/floor-after.jpg",
+  },
+  {
+    label: "Sink",
+    emoji: "🚰",
+    before: "/images/sink-before.jpg",
+    after: "/images/sink-after.jpg",
+  },
+  {
+    label: "Living Room",
+    emoji: "🛋️",
+    before: "/images/livingroom-before.jpg",
+    after: "/images/livingroom-after.jpg",
+  },
 ];
 
-function ImagePlaceholder({ label, type }: { label: string; type: "before" | "after" }) {
+function PhotoCard({
+  src,
+  alt,
+  type,
+}: {
+  src: string;
+  alt: string;
+  type: "before" | "after";
+}) {
   const isBefore = type === "before";
   return (
-    <div
-      className={`aspect-video rounded-xl flex flex-col items-center justify-center gap-2 ${
-        isBefore
-          ? "bg-gray-200 border-2 border-dashed border-gray-300"
-          : "bg-emerald-50 border-2 border-dashed border-emerald-300"
-      }`}
-    >
-      <span className="text-3xl">{isBefore ? "😬" : "✨"}</span>
-      <span
-        className={`text-xs font-bold uppercase tracking-widest ${
-          isBefore ? "text-gray-400" : "text-emerald-600"
+    <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-100">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+      />
+      <div
+        className={`absolute bottom-0 left-0 right-0 py-1.5 text-center text-xs font-extrabold uppercase tracking-widest ${
+          isBefore
+            ? "bg-black/60 text-white"
+            : "bg-emerald-500/90 text-white"
         }`}
       >
-        {type === "before" ? "Before" : "After"}
-      </span>
-      <span className="text-xs text-gray-400">Add {label} photo</span>
+        {isBefore ? "Before" : "After ✓"}
+      </div>
     </div>
   );
 }
@@ -40,32 +83,31 @@ export default function BeforeAfter() {
             See the Difference
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Replace the placeholders below with your real before &amp; after photos to
-            build instant trust with potential customers.
+            Real photos from real jobs — no filters, no staging.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          {pairs.map((p) => (
-            <div key={p.label} className="space-y-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {photos.map((p) => (
+            <div key={p.label}>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-2xl">{p.emoji}</span>
+                <span className="text-xl">{p.emoji}</span>
                 <span className="font-bold text-gray-800">{p.label}</span>
               </div>
-              <div className="grid grid-cols-2 gap-3">
-                <ImagePlaceholder label={p.label} type="before" />
-                <ImagePlaceholder label={p.label} type="after" />
+              <div className="grid grid-cols-2 gap-2">
+                <PhotoCard
+                  src={p.before}
+                  alt={`${p.label} before cleaning`}
+                  type="before"
+                />
+                <PhotoCard
+                  src={p.after}
+                  alt={`${p.label} after cleaning`}
+                  type="after"
+                />
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Tip banner */}
-        <div className="mt-10 bg-blue-50 border border-blue-200 rounded-xl p-5 text-center">
-          <p className="text-blue-700 text-sm font-medium">
-            💡 <strong>Pro tip:</strong> Add 4–6 real before/after photos to this
-            section. Authentic photos increase conversions by up to 30%.
-          </p>
         </div>
       </div>
     </section>
