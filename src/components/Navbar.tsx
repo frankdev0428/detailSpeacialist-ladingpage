@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="text-xl font-extrabold text-blue-700 shrink-0">
-          🧹 The Detail Specialist
+          🧹 Bay Shine Cleaning
         </a>
 
         {/* Desktop nav */}

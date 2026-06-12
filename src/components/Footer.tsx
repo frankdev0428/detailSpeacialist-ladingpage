@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="text-2xl font-extrabold text-white mb-3">
-            🧹 The Detail Specialist
+            🧹 Bay Shine Cleaning
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
             Family-owned cleaning service specializing in move-out and deep cleaning
@@ -58,7 +58,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto mt-10 pt-8 border-t border-gray-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-        <p>© {new Date().getFullYear()} East Bay Cleaners. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Bay Shine Cleaning. All rights reserved.</p>
         <p>Serving the East Bay, California</p>
       </div>
     </footer>
