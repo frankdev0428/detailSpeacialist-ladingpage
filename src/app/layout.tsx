@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-white text-gray-900">
         {children}
       </body>
+      <GoogleAnalytics gaId="G-J0PCT2FG4M" />
     </html>
   );
 }
