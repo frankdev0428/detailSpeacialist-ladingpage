@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 const PHONE = "(510) 999-1514";
 const PHONE_RAW = "+15109991514";
 
@@ -12,12 +14,12 @@ const areas = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12 px-6">
+    <footer className="bg-[#0c2340] text-gray-300 py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
         {/* Brand */}
         <div>
-          <div className="text-2xl font-extrabold text-white mb-3">
-            🧹 Bay Shine Cleaning
+          <div className="mb-4">
+            <Logo variant="dark" size="md" />
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
             Family-owned cleaning service specializing in move-out and deep cleaning

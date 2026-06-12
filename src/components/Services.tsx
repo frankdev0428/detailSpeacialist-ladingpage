@@ -36,16 +36,16 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 bg-gray-50">
+    <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="inline-block bg-blue-100 text-blue-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
             What We Clean
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
             Our Cleaning Services
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
             Specialized for move-outs and deep cleans across the East Bay.
           </p>
         </div>
@@ -54,14 +54,14 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100"
+              className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-gray-700"
             >
               <div className="text-5xl mb-4">{s.icon}</div>
-              <h3 className="text-xl font-extrabold text-gray-900 mb-2">{s.title}</h3>
-              <p className="text-gray-500 text-sm mb-5 leading-relaxed">{s.desc}</p>
+              <h3 className="text-xl font-extrabold text-gray-900 dark:text-white mb-2">{s.title}</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mb-5 leading-relaxed">{s.desc}</p>
               <ul className="space-y-2">
                 {s.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-gray-700">
+                  <li key={b} className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
                     <span className="text-emerald-500 font-bold mt-0.5">✓</span>
                     {b}
                   </li>

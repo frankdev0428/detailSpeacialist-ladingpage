@@ -32,16 +32,16 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-2xl mx-auto px-6">
         <div className="text-center mb-10">
           <span className="inline-block bg-emerald-100 text-emerald-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
             Get a Quote
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
             Request a Free Quote
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500 dark:text-gray-400 text-lg">
             Fill out the form and we&apos;ll call or text you back within 30 minutes
             during business hours.
           </p>
@@ -60,7 +60,7 @@ export default function ContactForm() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm space-y-5"
+            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 shadow-sm space-y-5"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>

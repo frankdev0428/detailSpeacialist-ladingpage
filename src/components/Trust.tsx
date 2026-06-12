@@ -23,13 +23,13 @@ const badges = [
 
 export default function Trust() {
   return (
-    <section id="trust" className="py-16 bg-white">
+    <section id="trust" className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
             Why Homeowners Trust Us
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
             We built this business on word of mouth — and we plan to keep it that way.
           </p>
         </div>
@@ -38,11 +38,11 @@ export default function Trust() {
           {badges.map((b) => (
             <div
               key={b.title}
-              className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              className="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="text-5xl mb-4">{b.icon}</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{b.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{b.desc}</p>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{b.title}</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{b.desc}</p>
             </div>
           ))}
         </div>

@@ -73,16 +73,16 @@ function PhotoCard({
 
 export default function BeforeAfter() {
   return (
-    <section id="results" className="py-16 bg-white">
+    <section id="results" className="py-16 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="inline-block bg-emerald-100 text-emerald-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
             Real Results
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
             See the Difference
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
             Real photos from real jobs — no filters, no staging.
           </p>
         </div>
@@ -92,7 +92,7 @@ export default function BeforeAfter() {
             <div key={p.label}>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xl">{p.emoji}</span>
-                <span className="font-bold text-gray-800">{p.label}</span>
+                <span className="font-bold text-gray-800 dark:text-gray-100">{p.label}</span>
               </div>
               <div className="grid grid-cols-2 gap-2">
                 <PhotoCard

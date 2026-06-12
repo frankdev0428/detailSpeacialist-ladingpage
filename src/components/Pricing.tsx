@@ -26,16 +26,16 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-16 bg-gray-50">
+    <section id="pricing" className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="inline-block bg-yellow-100 text-yellow-700 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block bg-yellow-100 dark:bg-yellow-900/40 text-yellow-700 dark:text-yellow-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
             Transparent Pricing
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
             Simple, Honest Pricing
           </h2>
-          <p className="text-gray-500 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
             Most jobs range from <strong>$150 – $300</strong> depending on size and
             condition. No hidden fees. Call for a free quote in 60 seconds.
           </p>
@@ -48,7 +48,7 @@ export default function Pricing() {
               className={`rounded-2xl p-8 text-center border-2 transition-shadow ${
                 t.highlight
                   ? "bg-blue-700 border-blue-700 text-white shadow-xl shadow-blue-200"
-                  : "bg-white border-gray-100 text-gray-900 shadow-sm"
+                  : "bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-700 text-gray-900 dark:text-white shadow-sm"
               }`}
             >
               {t.highlight && (
@@ -59,7 +59,7 @@ export default function Pricing() {
               <div className="text-lg font-bold mb-1">{t.size}</div>
               <div
                 className={`text-4xl font-extrabold mb-2 ${
-                  t.highlight ? "text-white" : "text-blue-700"
+                  t.highlight ? "text-white" : "text-blue-700 dark:text-blue-400"
                 }`}
               >
                 {t.range}
@@ -74,7 +74,7 @@ export default function Pricing() {
         </div>
 
         <div className="text-center space-y-4">
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
             Prices may vary based on property condition. We'll give you an honest quote
             before we start — always.
           </p>
