@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Trust from "@/components/Trust";
+import HowItWorks from "@/components/HowItWorks";
 import Services from "@/components/Services";
 import BeforeAfter from "@/components/BeforeAfter";
+import Reviews from "@/components/Reviews";
 import Pricing from "@/components/Pricing";
 import CTA from "@/components/CTA";
 import ContactForm from "@/components/ContactForm";
@@ -16,8 +18,10 @@ export default function Home() {
       <main>
         <Hero />
         <Trust />
+        <HowItWorks />
         <Services />
         <BeforeAfter />
+        <Reviews />
         <Pricing />
         <CTA />
         <ContactForm />

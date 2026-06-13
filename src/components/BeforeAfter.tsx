@@ -83,7 +83,7 @@ export default function BeforeAfter() {
             See the Difference
           </h2>
           <p className="text-gray-500 dark:text-gray-400 text-lg max-w-xl mx-auto">
-            Real photos from real jobs — no filters, no staging.
+            Real photos from real jobs across Hayward, Castro Valley &amp; San Leandro — no filters, no staging.
           </p>
         </div>
 

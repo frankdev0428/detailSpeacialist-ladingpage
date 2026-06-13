@@ -8,8 +8,8 @@ const PHONE_RAW = "+15109991514";
 
 const navLinks = [
   { href: "#services", label: "Services" },
+  { href: "#reviews", label: "Reviews" },
   { href: "#pricing", label: "Pricing" },
-  { href: "#results", label: "Results" },
   { href: "#contact", label: "Get a Quote" },
 ];
 
