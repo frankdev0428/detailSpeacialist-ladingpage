@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Services from "@/components/Services";
 import BeforeAfter from "@/components/BeforeAfter";
 import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
 import CTA from "@/components/CTA";
 import ContactForm from "@/components/ContactForm";
@@ -22,6 +23,7 @@ export default function Home() {
         <Services />
         <BeforeAfter />
         <Reviews />
+        <FAQ />
         <Pricing />
         <CTA />
         <ContactForm />
